@@ -30,17 +30,22 @@ namespace SpecialGrid.Core.Models.Tests
         [TestMethod()]
         public void SpecialGridTest()
         {
-            var grid = new SpecialGrid(testSize, testShadedCellList, testNumberList);
+            SpecialGrid grid = InitSpecialGrid();
 
             Assert.IsTrue(grid.Size == testSize);
             Assert.IsTrue(grid.InitList == testShadedCellList);
             Assert.IsTrue(grid.NumberList == testNumberList);
         }
 
+        private SpecialGrid InitSpecialGrid()
+        {
+            return new SpecialGrid(testSize, testShadedCellList, testNumberList);
+        }
+
         [TestMethod]
         public void SpecialGridDataTerst()
         {
-            var grid = new SpecialGrid(testSize, testShadedCellList, testNumberList);
+            var grid = InitSpecialGrid();
 
             Assert.IsTrue(grid.Data.GetType() == typeof(Cell[,]));
             Assert.IsTrue(grid.Data[0, 0].GetType() == typeof(WhiteCell));
@@ -48,6 +53,59 @@ namespace SpecialGrid.Core.Models.Tests
 
             Assert.IsTrue(grid.Data[0, 0].Value == default(int));
             Assert.IsTrue(grid.Data[1, 1].Value == 26);
+        }
+
+        [TestMethod]
+        public void FillOneRowTest()
+        {
+            var grid = InitSpecialGrid();
+            var zeroIindex = 0;
+
+            grid.FillRow(zeroIindex);
+
+            Assert.IsTrue(grid.Data[zeroIindex, 0].Value == 1);
+            Assert.IsTrue(grid.Data[zeroIindex, 6].Value == 7);
+            Assert.IsTrue(grid.IsRowValid(zeroIindex));
+
+            var oneIndex = 1;
+            grid.FillRow(oneIndex);
+            Assert.IsTrue(grid.Data[oneIndex, 0].Value == 1);
+            Assert.IsTrue(grid.Data[oneIndex, 6].Value == 4);
+            Assert.IsTrue(grid.IsRowValid(oneIndex));
+        }
+
+        [TestMethod]
+        public void FillOneColumnTest()
+        {
+            var grid = InitSpecialGrid();
+            var index = 0;
+
+            grid.FillColumn(index);
+
+            Assert.IsTrue(grid.Data[0, 0].Value == 1);
+            Assert.IsTrue(grid.Data[6, 0].Value == 7);
+            Assert.IsTrue(grid.IsColumnValid(index));
+
+            var oneIndex = 1;
+            grid.FillColumn(oneIndex);
+            Assert.IsTrue(grid.Data[0, oneIndex].Value == 1);
+            Assert.IsTrue(grid.Data[6, oneIndex].Value == 4);
+            Assert.IsTrue(grid.IsColumnValid(oneIndex));
+        }
+
+        [TestMethod]
+        public void FillWholeGrid()
+        {
+            var grid = InitSpecialGrid();
+
+            for (int i = 0; i < grid.Size; i++)
+            {
+                grid.FillRow(i);
+                Assert.IsTrue(grid.IsRowValid(i));
+
+                grid.FillColumn(i);
+                Assert.IsTrue(grid.IsColumnValid(i));
+            }
         }
     }
 }

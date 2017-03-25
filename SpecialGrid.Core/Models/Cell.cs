@@ -2,15 +2,19 @@
 {
     public abstract class Cell
     {
-        public Cell(int x,int y,int value)
+        public Cell(int x,int y)
         {
             X = x;
             Y = y;
-            Value = value;
         }
 
-        public int Value { get; private set; }
+        public abstract int Value { get; }
         public int X { get; private set; }
         public int Y { get; private set; }
+
+        public override string ToString()
+        {
+            return Value + "\t";
+        }
     }
 }
