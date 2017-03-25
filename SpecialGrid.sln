@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialGrid", "SpecialGrid\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialGrid.Core", "SpecialGrid.Core\SpecialGrid.Core.csproj", "{90CDFE5B-C6E4-41D9-BDAE-D40D2084707A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialGrid.CoreTests", "SpecialGrid.CoreTests\SpecialGrid.CoreTests.csproj", "{3EA2A933-6A93-412E-B201-BA9875B4ADCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{90CDFE5B-C6E4-41D9-BDAE-D40D2084707A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90CDFE5B-C6E4-41D9-BDAE-D40D2084707A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90CDFE5B-C6E4-41D9-BDAE-D40D2084707A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA2A933-6A93-412E-B201-BA9875B4ADCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA2A933-6A93-412E-B201-BA9875B4ADCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA2A933-6A93-412E-B201-BA9875B4ADCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA2A933-6A93-412E-B201-BA9875B4ADCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

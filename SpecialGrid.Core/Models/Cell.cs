@@ -1,4 +1,4 @@
-﻿namespace SpecialGrid.Core
+﻿namespace SpecialGrid.Core.Models
 {
     public abstract class Cell
     {

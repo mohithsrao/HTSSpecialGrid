@@ -40,10 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cell.cs" />
+    <Compile Include="Models\Cell.cs" />
+    <Compile Include="Models\SpecialGrid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShadedCell.cs" />
-    <Compile Include="WhiteCell.cs" />
+    <Compile Include="Models\ShadedCell.cs" />
+    <Compile Include="Models\WhiteCell.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

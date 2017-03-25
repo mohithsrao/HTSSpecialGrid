@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SpecialGrid.Core
+namespace SpecialGrid.Core.Models
 {
     public class WhiteCell : Cell
     {
