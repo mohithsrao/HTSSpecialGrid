@@ -11,15 +11,15 @@ namespace SpecialGrid.Core.Models.Tests
     [TestClass()]
     public class SpecialGridTests
     {
-        int testSize = 5;
+        int testSize = 3;
         IEnumerable<int> testNumberList = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
         IEnumerable<ShadedCell> testShadedCellList = new List<ShadedCell>() {
                 new ShadedCell(1,1,26),
-                new ShadedCell(1,3,35),
+                //new ShadedCell(1,3,35),
                 //new ShadedCell(1,5,37),
 
-                new ShadedCell(3,1,31),
-                new ShadedCell(3,3,36),
+                //new ShadedCell(3,1,31),
+                //new ShadedCell(3,3,36),
                 //new ShadedCell(3,5,39),
 
                 //new ShadedCell(5,1,38),
