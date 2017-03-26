@@ -14,7 +14,7 @@
 
         public override string ToString()
         {
-            return Value + "\t";
+            return Value.ToString();
         }
     }
 }
